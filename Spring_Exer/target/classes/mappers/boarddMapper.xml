@@ -9,10 +9,10 @@
 		,CONTENT
 		,WRITER)
 		VALUES(
-		#{BNO}
-		,#{TITLE}
-		,#{CONTENT}
-		,#{WRITER}
+		BOARD_SEQ.NEXTVAL
+		,#{title}
+		,#{content}
+		,#{writer}
 		)
 	</insert>
 </mapper>

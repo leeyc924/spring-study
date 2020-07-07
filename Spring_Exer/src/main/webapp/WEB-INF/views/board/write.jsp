@@ -13,7 +13,7 @@
 		<nav>홈 - 글 작성</nav>
 		<hr />
 		<section id="container">
-			<form role="form" method="post" action="/board/write">
+			<form role="form" method="post" action="/board/writeView">
 				<table>
 					<tbody>
 						<tr>

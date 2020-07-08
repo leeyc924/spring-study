@@ -17,16 +17,21 @@
 				<table>
 					<tbody>
 						<tr>
-							<td><label for="title">제목</label><input type="text"
-								id="title" name="title" /></td>
+							<td>
+								<label for="title">제목</label>
+								<input type="text" id="title" name="title" />
+							</td>
 						</tr>
 						<tr>
-							<td><label for="content">내용</label>
-							<textarea id="content" name="content"></textarea></td>
+							<td>
+								<label for="content">내용</label>
+								<textarea id="content" name="content"></textarea>
+							</td>
 						</tr>
 						<tr>
-							<td><label for="writer">작성자</label><input type="text"
-								id="writer" name="writer" /></td>
+							<td>
+								<label for="writer">작성자</label><input type="text" id="writer" name="writer" />
+							</td>
 						<tr>
 							<td>
 								<button type="submit">작성</button>

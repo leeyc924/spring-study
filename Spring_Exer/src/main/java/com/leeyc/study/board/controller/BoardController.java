@@ -20,20 +20,19 @@ public class BoardController {
 	@Autowired
 	BoardService service;
 
-	@RequestMapping("/board/write")
-	public String write() throws Exception {
-		logger.info("write");
-		return "/board/write";
-	}
-
-	// 게시판 글 작성 화면
-	@RequestMapping("/board/writeView")
-	public ModelAndView writeView(HttpServletRequest request) throws Exception {
-		BoardVO boardVO = new BoardVO();
+	@RequestMapping(value = "/board/writeView", method = RequestMethod.GET)
+	public void writeView() throws Exception{
 		logger.info("writeView");
-		ModelAndView view = new ModelAndView();
+		
+	}
+	
+	// 게시판 글 작성
+	@RequestMapping(value = "/board/write", method = RequestMethod.POST)
+	public String write(BoardVO boardVO) throws Exception{
+		logger.info("write");
+		
 		service.write(boardVO);
-		view.setViewName("/board/write");
-		return view;
+		
+		return "redirect:/";
 	}
 }

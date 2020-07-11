@@ -20,6 +20,15 @@ public class BoardController {
 	@Autowired
 	BoardService service;
 
+	@RequestMapping("/board/list")
+	public ModelAndView list(HttpServletRequest request) throws Exception {
+		logger.info("list");
+		ModelAndView view = new ModelAndView();
+		view.addObject("list",service.list());
+		view.setViewName("borad/list");
+		return view;
+	}
+	
 	@RequestMapping(value = "/board/writeView", method = RequestMethod.GET)
 	public void writeView() throws Exception{
 		logger.info("writeView");
@@ -35,4 +44,5 @@ public class BoardController {
 		
 		return "redirect:/";
 	}
+	
 }

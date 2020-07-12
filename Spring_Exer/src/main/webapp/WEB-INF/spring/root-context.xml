@@ -13,6 +13,7 @@
 			<value>/WEB-INF/config/jdbc/jdbc.properties</value>
 		</property>
 	</bean>
+	
 	<bean id="dataSource" class="org.apache.ibatis.datasource.pooled.PooledDataSource">
 		<property name="driver" value="${jdbc.driverClassName}" />
 		<property name="url" value="${jdbc.url}" />

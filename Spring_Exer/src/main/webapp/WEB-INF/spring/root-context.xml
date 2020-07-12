@@ -7,9 +7,9 @@
 
 	<!-- Root Context: defines shared resources visible to all other web components -->
 	<!-- jdbc -->
-	<bean id="propertyPlaceholderConfigurer"
+	<bean id="propertyPlaceholderConfigurer" 
 		class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
-		<property name="locations">
+		<property name="locations"> 
 			<value>/WEB-INF/config/jdbc/jdbc.properties</value>
 		</property>
 	</bean>

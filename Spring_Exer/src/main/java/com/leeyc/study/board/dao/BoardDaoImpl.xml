@@ -3,7 +3,13 @@
   PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.leeyc.study.board.dao.BoardDao">
-	<resultMap type="BoardVO" id="BoardMap"></resultMap>
+	<resultMap type="BoardVO" id="BoardMap">
+		<id property="bno" column="bno"/>
+		<result property="title" column="title"/>
+		<result property="content" column="content"/>
+		<result property="writer" column="writer"/>
+		<result property="regdate" column="regdate"/>
+	</resultMap>
 		
 	<select id="list" resultType="com.leeyc.study.board.vo.BoardVO">
 		SELECT BNO
@@ -22,6 +28,5 @@
 		, #{title}
 		, #{content}
 		, #{writer} )
-
 	</insert>
 </mapper>

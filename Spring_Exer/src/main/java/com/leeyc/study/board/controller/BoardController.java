@@ -1,5 +1,9 @@
 package com.leeyc.study.board.controller;
 
+import java.text.DateFormat;
+import java.util.Date;
+import java.util.Locale;
+
 import javax.servlet.http.HttpServletRequest;
 
 import org.slf4j.Logger;
@@ -21,6 +25,12 @@ public class BoardController {
 	@Autowired
 	BoardService service;
 
+	// 초기경로
+	@RequestMapping("/")
+	public String home() {
+		return "redirect:/board/list";
+	}
+
 	// 게시판 목록 조회
 	@RequestMapping("/board/list")
 	public ModelAndView list(HttpServletRequest request) throws Exception {
@@ -31,16 +41,21 @@ public class BoardController {
 		return view;
 	}
 
-	@RequestMapping(value = "/board/writeView", method = RequestMethod.GET)
-	public void writeView() throws Exception {
+	@RequestMapping("/board/writeView")
+	public ModelAndView writeView(HttpServletRequest request) throws Exception {
 		logger.info("writeView");
+		ModelAndView view = new ModelAndView();
+		view.setViewName("/writeView");
+		return view;
 	}
 
-	// 게시판 글 작성
-	@RequestMapping(value = "/board/write", method = RequestMethod.POST)
-	public String write(BoardVO boardVO) throws Exception {
+	@RequestMapping("/board/write")
+	public ModelAndView write(HttpServletRequest request) throws Exception {
 		logger.info("write");
+		ModelAndView view = new ModelAndView();
+		BoardVO boardVO = new BoardVO();
 		service.write(boardVO);
-		return "redirect:/";
+		view.setViewName("board/list");
+		return view;
 	}
 }

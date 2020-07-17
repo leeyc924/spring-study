@@ -19,7 +19,7 @@
 		FROM BOARD
 		ORDER BY BNO DESC
 	</select>
-	<insert id="insert" parameterType="BoardVO">
+	<insert id="write" parameterType="BoardVO">
 		INSERT INTO BOARD( BNO
 		, TITLE
 		, CONTENT

@@ -45,7 +45,7 @@ public class BoardController {
 	public ModelAndView writeView(HttpServletRequest request) throws Exception {
 		logger.info("writeView");
 		ModelAndView view = new ModelAndView();
-		view.setViewName("/writeView");
+		view.setViewName("board/writeView");
 		return view;
 	}
 
@@ -55,7 +55,7 @@ public class BoardController {
 		ModelAndView view = new ModelAndView();
 		BoardVO boardVO = new BoardVO();
 		service.write(boardVO);
-		view.setViewName("board/list");
+		view.setViewName("redirect:/board/list");
 		return view;
 	}
 }

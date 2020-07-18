@@ -4,6 +4,6 @@
   "http://mybatis.org/dtd/mybatis-3-config.dtd">
 <configuration>
 	<typeAliases>
-		<typeAlias alias="BoardVO" type="com.leeyc.study.board.vo.BoardVO" />
+		<typeAlias type="com.leeyc.study.board.vo.BoardVO" alias="BoardVO"/>
 	</typeAliases>
 </configuration>

@@ -19,7 +19,8 @@
 		FROM BOARD
 		ORDER BY BNO DESC
 	</select>
-	<insert id="write" parameterType="BoardVO">
+	
+	<insert id="write" parameterType="com.leeyc.study.board.vo.BoardVO">
 		INSERT INTO BOARD( BNO
 		, TITLE
 		, CONTENT
@@ -27,6 +28,6 @@
 		VALUES( BOARD_SEQ.NEXTVAL
 		, #{title}
 		, #{content}
-		, #{writer} )
+		, #{writer} );
 	</insert>
 </mapper>

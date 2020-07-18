@@ -12,7 +12,7 @@ import com.leeyc.study.board.vo.BoardVO;
 public class BoardServiceImpl implements BoardService {
 
 	@Autowired
-	private BoardDao dao;
+	BoardDao dao;
 
 	// 게시글 작성
 	@Override

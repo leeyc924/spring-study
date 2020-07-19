@@ -28,6 +28,6 @@
 		VALUES( BOARD_SEQ.NEXTVAL
 		, #{title}
 		, #{content}
-		, #{writer} );
+		, #{writer} )
 	</insert>
 </mapper>

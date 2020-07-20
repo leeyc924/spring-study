@@ -26,7 +26,7 @@
 		, CONTENT
 		, WRITER )
 		VALUES( BOARD_SEQ.NEXTVAL
-		, #{title}
+		, #{title}  
 		, #{content}
 		, #{writer} )
 	</insert>

@@ -25,7 +25,7 @@
 		, TITLE
 		, CONTENT
 		, WRITER )
-		VALUES( BOARD_SEQ.NEXTVAL
+		VALUES( BOARD_SEQ.NEXTVAL 
 		, #{title}  
 		, #{content}
 		, #{writer} )
